@@ -1,0 +1,117 @@
+<html>	
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+						<li><a href="#">Add bus</a></li>
+						<li><a href="#">User details</a></li>
+						<li><a href="#">Pass details</a></li>
+						<li><a href="#">Mail</a></li>
+						<li><a href="#">Logout</a></li>
+						<div class="panel-heading">
+    </ul>
+  </div>
+</nav>
+<div class="container">&nbsp;
+    <div class="row">
+    <div class="col-md-7 col-md-offset-3">
+        <div class="panel panel-primary">
+        <div class="panel-heading">
+	 <center><b><h4>Add bus</h4></b></center></div>&nbsp;
+	<form class="form-horizontal" method="post"action="{{url_for('register_page')}}">
+		<fieldset>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="busno">Bus Number</label>  
+  <div class="col-md-5">
+  <input type="number" name="busno"  placeholder="Busno" class="form-control input-md" required="">
+</div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Bus Route">Bus Route From</label>  
+  <div class="col-md-3">
+  <input type="text" name="busroute"  placeholder="Busroute" class="form-control input-md" required="">
+</div>
+<label class="col-sm-1 control-label" for="Bus Route"> To </label>  
+  <div class="col-md-3">
+  <input type="text" name="busroute"  placeholder="Busroute" class="form-control input-md" required="">
+</div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Bus Route">Stops   1</label>  
+  <div class="col-md-3">
+  <input type="text" name="busroute"  placeholder="" class="form-control input-md" required="">
+</div>
+<label class="col-sm-1 control-label" for="Bus Route">2</label>  
+  <div class="col-md-3">
+  <input type="text" name="busroute"  placeholder="" class="form-control input-md" required="">
+</div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Bus Route">3</label>  
+  <div class="col-md-3">
+  <input type="text" name="busroute"  placeholder="" class="form-control input-md" required="">
+</div>
+<label class="col-sm-1 control-label" for="Bus Route">4</label>  
+  <div class="col-md-3">
+  <input type="text" name="busroute"  placeholder="" class="form-control input-md" required="">
+</div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Bus Route">5</label>  
+  <div class="col-md-3">
+  <input type="text" name="busroute"  placeholder="" class="form-control input-md" required="">
+</div>
+<label class="col-sm-1 control-label" for="Bus Route">6</label>  
+  <div class="col-md-3">
+  <input type="text" name="busroute"  placeholder="" class="form-control input-md" required="">
+</div>
+</div><div class="form-group">
+  <label class="col-md-4 control-label" for="Bus Route">7</label>  
+  <div class="col-md-3">
+  <input type="text" name="busroute"  placeholder="" class="form-control input-md" required="">
+</div>
+<label class="col-sm-1 control-label" for="Bus Route">8</label>  
+  <div class="col-md-3">
+  <input type="text" name="busroute"  placeholder="" class="form-control input-md" required="">
+</div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Bus Route">9</label>  
+  <div class="col-md-3">
+  <input type="text" name="busroute"  placeholder="" class="form-control input-md" required="">
+</div>
+<label class="col-sm-1 control-label" for="Bus Route">10</label>  
+  <div class="col-md-3">
+  <input type="text" name="busroute"  placeholder="" class="form-control input-md" required="">
+</div>
+</div>
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Bus Route">11</label>  
+  <div class="col-md-3">
+  <input type="text" name="busroute"  placeholder="" class="form-control input-md" required="">
+</div>
+<label class="col-sm-1 control-label" for="Bus Route">12</label>  
+  <div class="col-md-3">
+  <input type="text" name="busroute"  placeholder="" class="form-control input-md" required="">
+</div>
+</div>
+
+<div class="form-group">
+  <label class="col-md-6 control-label" for="submit"></label>
+  <div class="col-md-6">
+  <button type="submit" name="submit" class="btn btn-primary">SUBMIT</button>
+</div>
+</div>
+</fieldset>
+</form>
+</div>
+</body>
+</html>
