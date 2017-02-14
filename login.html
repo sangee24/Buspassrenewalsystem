@@ -1,0 +1,91 @@
+<html>
+<head>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+	body{
+		background:url('http://myciti.org.za/docs/1101/Myciti.jpg') fixed;
+		background-size:100% 100%;
+	}
+
+#login-dp{
+    min-width: 330px;
+    padding: 10px 10px 0;
+    overflow:hidden;
+    background-color:rgba(265,265,265,.8);
+    height: 200px;
+    box-shadow: 5px 5px 5px #888888;
+}
+.log{
+  background-color:#00f88a;
+  box-shadow:5px 5px 7px #999999;
+}
+#login-dp .bottom{
+    background-color:rgba(265,265,265,.8);
+    border-top:1px solid #ddd;
+    padding:10px;
+}
+
+#login-dp .form-group {
+    margin-bottom: 20px;
+}
+.navbar{
+	width:auto;
+  box-shadow: 5px 5px 7px #999999;
+ 
+}
+.navbar-text{
+	font-family:oblique;
+  font-size:20px;
+}
+</style>
+</head>
+<body>
+	<nav class="navbar navbar-default" role="navigation">
+		<h3><p class="navbar-text"><b>ONLINE BUSPASS SYSTEM</b></p></h3>
+	  <div class="container-fluid col-xs-8">
+		<ul class="nav navbar-nav navbar-right">
+		<li><a href="/register"><span class="glyphicon glyphicon-user"></span>Sign Up</a></button></li>
+		<li class="dropdown">
+		<a class="dropdown-toggle btn-default log" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span><b>Login</b></a>
+		<ul id="login-dp" class="dropdown-menu">
+		<li>
+		<div class="row">  
+			<div class="col-md-8 col-sm-6 col-md-8 lg-bg"></div>  	
+		<div class="col-md-12">
+		Login
+		<form class="form" role="form" method="post" action="{{url_for('login_reg')}}"  accept-charset="UTF-8" id="login-nav">
+		   <div class="form-group">
+	 <label class="col-md-13 control-label" for="user"></label>  
+	 <div class="col-md-13">
+	<input id="userid" name="name" type="integer" placeholder="User name" class="form-control input-md" required="">
+	</div>
+	</div>
+	<div class="form-group">
+	  <label class="col-md-13 control-label" for="pw"></label>  
+	  <div class="col-md-13">
+	  <input id="pw" name="password" type="password" placeholder="Password" class="form-control input-md" required="">
+	</div>
+	</div>
+      <div class="form-group">
+	  <label class="col-md-4 control-label" for="submit"></label>
+	  <div class="col-md-4">
+<a href="/profile"><button id="submit" name="Sign In" class="btn btn-success"> Sign In</button></a>
+	   </div>
+	   </div>						
+		</form>
+	</div>
+	</li>
+	</ul>
+	</li>
+	</ul>
+	</div>
+	</div>
+	</nav>
+
+</div>
+</body>
+</html>

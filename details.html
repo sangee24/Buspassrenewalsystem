@@ -1,0 +1,126 @@
+<html>	
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+	.no-padding{
+		padding:0px;
+	    margin-top: auto;
+	  }
+	  .padding{
+		  padding:100px;
+		  
+	  }  
+	#title{
+		  position:absolute;
+	    right: 482px;
+    width: 400px;
+  margin-top: auto;
+    padding:0px;
+}
+  #bus {
+     position: absolute;
+    right: 294px;
+    margin-top: auto;
+    width: 200px;
+    }
+    
+    #logobus {
+	position: left;
+    left: 400px;
+    margin-top: auto;
+    width: 90px;
+    }
+  </style>
+</head>
+<body>
+	<div class="page-header no-padding">
+	<div class="container" style="float:left"> 
+	<img id="bus" src="http://www.bdoto.com/images/upload/qfbuVr4N.png" class="img.responsive" style="float:right" ><br>	
+  <h3 id="title" style="float:right">
+<img id="logobus" class="img.responsive" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/matte-blue-and-white-square-icons-transport-travel/118396-matte-blue-and-white-square-icon-transport-travel-transportation-van1.png"style="float:left;">
+	<b><br>Online Buspass Renewal <center>System</center></b></h3>	
+	</div>
+	</div>
+		<div class="container padding">
+<div class="row" >
+    <div class="col-md-7 col-md-offset-3">
+<div class=" panel panel-primary" >
+<nav class="navbar navbar-static-top"style="background-color:#191970;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+</div>
+    <ul class="nav navbar-nav navbar-center">
+    <li><a href="/success"style="color:#ffffff;"><span class="glyphicon glyphicon-user"style="color:#ffffff;"></span>Profile</a></li>
+    <li><a href="/createpass"style="color:#ffffff;"><span style="color:#ffffff;"></span>Create Pass</a></li>
+    <li><a href="/passdetails"style="color:#ffffff;"><span style="color:#ffffff;"></span>Pass Details</a></li>
+    <li><a href="/renew"style="color:#ffffff;"><span style="color:#ffffff;"></span>Renew Pass</a></li>
+    <li><a href="/"style="color:#ffffff;"><span class="glyphicon glyphicon-log-in"style="color:#ffffff;"></span> Logout</a></li>
+    </ul>
+</div>
+</nav>
+<center>
+	<div class="panel-heading" style="font-size:22px;text-decoration: underline;padding-top:0"><strong>Pass details</strong></div>
+    <div style="padding-top:0"class="panel-body" >
+	</div>  
+	<form class="form-horizontal">
+		<fieldset>
+			{% for createpass in createpass %}
+<div class="form-group">
+ <label class="col-md-5 control-label" for="pass">Pass Id</label>  
+ <div class="col-md-6">
+ <input type="text" name="passid" value="{{create.id}}" placeholder="Pass Id" class="form-control input-md" required="">
+</div>
+</div> {% endfor %}
+<div class="form-group">
+  <label class="col-md-5 control-label" for="bus">Bus No</label>
+  <div class="col-md-6">
+    <select  name="busno"  class="form-control">
+	  <option value=""></option>
+      <option value="45b">45b</option>
+      <option value="45c">45c</option>
+    </select>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-5 control-label" for="start">start stop</label>
+  <div class="col-md-6">
+    <select  name="start" class="form-control">
+	  <option value=""></option>
+      <option value="gandhipuram">gandhipuram</option>
+      <option value="saravanapatti">saravanapatti</option>
+    </select>
+  </div>
+</div>
+<div class="form-group">
+  <label class="col-md-5 control-label" for="End">End stop</label>
+  <div class="col-md-6">
+    <select  name="end" class="form-control">
+	  
+      <option value="gandhipuram">gandhipuram</option>
+      <option value="saravanapatti">saravanapatti</option>
+            <option value="Thudiyalur">Thudiyalur</option>
+    </select>
+  </div>
+</div>
+<div class="form-group">
+	 <label class="col-md-5 control-label" for="date">valid till</label>  
+      <div class="col-md-6">
+        <input  type="date" name="valid" class="form-control input-md" >
+      </div>
+      </div>
+  <div class="form-group">
+ <label class="col-md-5 control-label" for="amount">Amount</label>  
+ <div class="col-md-6">
+ <input type="number" name="amount"  placeholder="Amount" class="form-control" required="">
+</div>
+</div>
+</fieldset>
+</form>
+</div>
+</center>
+</body>
+</html>

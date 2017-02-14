@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+	.no-padding{
+		padding:0px;
+	    margin-top: auto;
+	  }
+	  .padding{
+		  padding:100px;
+		  
+	  }  
+	#title{
+		  position:absolute;
+	    right: 550px;
+    width: 400px;
+  margin-top: auto;
+    padding:0px
+}
+  #bus {
+     position: absolute;
+    right: 350px;
+    margin-top: auto;
+    width: 200px;
+    }
+</style>
+</head>
+<body> 
+	<div class="page-header no-padding">
+	<div class="container" style="float:left"> 
+	<img id="bus" src="http://www.bdoto.com/images/upload/qfbuVr4N.png" class="img.responsive" style="float:right" ><br>
+    <img id="title" src="http://www.bestpass.co.in/best/onlinepass/image/bestlogo.gif" class="img.responsive"  style="float:right"> 
+	</div>
+	</div>
+	
+<div class="container padding">
+<div class="row">
+    <div class="col-md-7 col-md-offset-3">
+<div class=" panel panel-primary" >
+<nav class="navbar navbar-static-top"style="background-color:#191970;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+</div>
+    <ul class="nav navbar-nav navbar-center" >
+    <li><a href="/home"style="color:#ffffff;"><span class="glyphicon glyphicon-user"style="color:#ffffff;"></span>Profile</a></li>
+    <li><a href="/createpass"style="color:#ffffff;"><span style="color:#ffffff;"></span>Create Pass</a></li>
+    <li><a href="/passdetails"style="color:#ffffff;"><span style="color:#ffffff;"></span>Pass Details</a></li>
+    <li><a href="/renew"style="color:#ffffff;"><span style="color:#ffffff;"></span>Renew Pass</a></li>
+    <li><a href="/"style="color:#ffffff;"><span class="glyphicon glyphicon-log-in"style="color:#ffffff;"></span> Logout</a></li>  
+    </ul>
+  </div>
+</nav>
+
+<table border="1" cellpadding="5" cellspacing="5">
+{% for row in data %}
+    <tr>
+    {% for d in row %}
+        <td>{{ d }}</td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+</table> 	
+	
+
+
+</body>
+</div>
+</html>
