@@ -1,0 +1,157 @@
+<html>	
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+	.no-padding{
+		padding:80px;
+	    margin-top: auto;
+	  }
+	  .padding{
+		  padding:20px 18px;
+		  
+	  }  
+	#title{
+		  position:absolute;
+	    right: 482px;
+    width: 400px;
+  margin-top: auto;
+    padding:0px;
+}
+  #bus {
+     position: absolute;
+    right: 294px;
+    margin-top: auto;
+    width: 200px;
+    }
+    
+    #logobus {
+	position: left;
+    left: 400px;
+    margin-top: auto;
+    width: 90px;
+    }
+  </style>
+</head>
+<body>
+		<div class="page-header no-padding">
+	<div class="container" style="float:left"> 
+	<img id="bus" src="http://www.bdoto.com/images/upload/qfbuVr4N.png" class="img.responsive" style="float:right" ><br>	
+  <h3 id="title" style="float:right">
+<img id="logobus" class="img.responsive" src="http://cdn.mysitemyway.com/etc-mysitemyway/icons/legacy-previews/icons/matte-blue-and-white-square-icons-transport-travel/118396-matte-blue-and-white-square-icon-transport-travel-transportation-van1.png"style="float:left;">
+	<b><br>Online Buspass Renewal <center>System</center></b></h3>	
+	</div>
+	</div>
+	<div class="container padding">
+<div class="row" >
+    <div class="col-md-7 col-md-offset-3">
+<div class=" panel panel-primary" >
+<nav class="navbar navbar-static-top"style="background-color:#191970;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+</div>
+    <ul class="nav navbar-nav navbar-center">
+    <li><a href="/addbus"style="color:#ffffff;"><span style="color:#ffffff;"></span>Add Bus</a></li>
+    <li><a href="/editbus"style="color:#ffffff;"><span style="color:#ffffff;"></span>Edit bus </a></li>
+    
+<li><a href="/userdetails"style="color:#ffffff;"><span style="color:#ffffff;"></span>User details</a></li>
+<li><a href="/detailpass"style="color:#ffffff;"><span style="color:#ffffff;"></span>Pass details</a></li>
+<li><a href="/mail"style="color:#ffffff;"><span style="color:#ffffff;"></span>Mail</a></li>
+
+    <li><a href="/"style="color:#ffffff;"><span class="glyphicon glyphicon-log-in"style="color:#ffffff;"></span> Logout</a></li>
+    </ul>
+</div>
+</nav>
+<center>
+	<div class="panel-heading" style="font-size:22px;text-decoration: underline;padding-top:0;"><strong>Edit Bus</strong></div>
+    <div style="padding-top:0"class="panel-body" >
+	</div>  
+	<form class="form-horizontal" method="post"action="{{url_for('addbus_page')}}">
+<table align="center" padding="10">
+        <fieldset>
+ <div class="form-group">
+   <label class="col-md-4 control-label" for="busno">Bus Number</label>  
+   <div class="col-md-5">
+   <input type="text" name="busnumber"  class="form-control input-md" required="" value="{{addb.busnumber}}" >
+ </div>
+ </div>
+ <div class="form-group">
+   <label class="col-md-4 control-label" for="Bus Route">Bus Route From</label>  
+   <div class="col-md-3">
+   <input type="text" name="startroute"   class="form-control input-md" required="" value="{{addb.startroute}}">
+ </div>
+ <label class="col-sm-1 control-label" for="Bus Route"> To </label>  
+   <div class="col-md-3">
+   <input type="text" name="endroute"  placeholder="Busroute" class="form-control input-md" required="" value="{{addb.endroute}}">
+ </div>
+ </div>
+ <div class="form-group">
+   <label class="col-md-4 control-label" for="Bus Route">Stops   1</label>  
+   <div class="col-md-3">
+   <input type="text" name="stopa"  placeholder="" class="form-control input-md" required="" value="{{addb.stopa}}">
+ </div>
+ <label class="col-sm-1 control-label" for="Bus Route">2</label>  
+   <div class="col-md-3">
+   <input type="text" name="stopb"  placeholder="" class="form-control input-md" required="" value="{{addb.stopb}}">
+ </div>
+ </div>
+ <div class="form-group">
+   <label class="col-md-4 control-label" for="Bus Route">3</label>  
+   <div class="col-md-3">
+   <input type="text" name="stopc"  placeholder="" class="form-control input-md" required="" value="{{addb.stopc}}">
+ </div>
+ <label class="col-sm-1 control-label" for="Bus Route">4</label>  
+   <div class="col-md-3">
+   <input type="text" name="stopd"  placeholder="" class="form-control input-md" required="" value="{{addb.stopd}}">
+ </div>
+ </div>
+ <div class="form-group">
+   <label class="col-md-4 control-label" for="Bus Route">5</label>  
+   <div class="col-md-3">
+   <input type="text" name="stope"  placeholder="" class="form-control input-md" required="" value="{{addb.stope}}">
+ </div>
+ <label class="col-sm-1 control-label" for="Bus Route">6</label>  
+   <div class="col-md-3">
+   <input type="text" name="stopf"  placeholder="" class="form-control input-md" required="" value="{{addb.stopf}}">
+ </div>
+ </div><div class="form-group">
+   <label class="col-md-4 control-label" for="Bus Route">7</label>  
+   <div class="col-md-3">
+   <input type="text" name="stopg"  placeholder="" class="form-control input-md" required="" value="{{addb.stopg}}">
+ </div>
+ <label class="col-sm-1 control-label" for="Bus Route">8</label>  
+   <div class="col-md-3">
+   <input type="text" name="stoph"  placeholder="" class="form-control input-md" required="" value="{{addb.stoph}}">
+ </div>
+ </div>
+ <div class="form-group">
+   <label class="col-md-4 control-label" for="Bus Route">9</label>  
+   <div class="col-md-3">
+   <input type="text" name="stopi"  placeholder="" class="form-control input-md" required="" value="{{addb.stopi}}">
+ </div>
+ <label class="col-sm-1 control-label" for="Bus Route">10</label>  
+   <div class="col-md-3">
+   <input type="text" name="stopj"  placeholder="" class="form-control input-md" required="" value="{{addb.stopj}}">
+ </div>
+ </div>
+
+ 
+ <div class="form-group">
+   <label class="col-md-6 control-label" for="submit"></label>
+   <div class="col-md-6">
+   <button type="submit" name="submit" class="btn btn-primary">SUBMIT</button>
+ </div>
+ </div>
+ </fieldset>
+ </form>
+</div>
+</center>
+</body>
+</html>
+
+
+
+
