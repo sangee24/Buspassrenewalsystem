@@ -69,13 +69,14 @@
 	<div class="panel-heading" style="font-size:22px;text-decoration: underline;padding-top:0;"><strong>Edit Bus</strong></div>
     <div style="padding-top:0"class="panel-body" >
 	</div>  
-	<form class="form-horizontal" method="post"action="{{url_for('addbus_page')}}">
+	<form class="form-horizontal" method="post"action="">
 <table align="center" padding="10">
         <fieldset>
+			
  <div class="form-group">
    <label class="col-md-4 control-label" for="busno">Bus Number</label>  
    <div class="col-md-5">
-   <input type="text" name="busnumber"  class="form-control input-md" required="" value="{{addb.busnumber}}" >
+   <input type="number" name="busnumber"  class="form-control input-md" required="" value="{{addb.busnumber}}" >
  </div>
  </div>
  <div class="form-group">

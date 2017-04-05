@@ -6,7 +6,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-	  	  		.no-padding{
+	.no-padding{
 		padding:0px;
 	    margin-top: auto;
 	  }
@@ -37,7 +37,7 @@
   </style>
 </head>
 <body>
-			<div class="page-header no-padding">
+	<div class="page-header no-padding">
 	<div class="container" style="float:left"> 
 	<img id="bus" src="http://www.bdoto.com/images/upload/qfbuVr4N.png" class="img.responsive" style="float:right" ><br>	
   <h3 id="title" style="float:right">
@@ -54,113 +54,30 @@
     <div class="navbar-header">
 </div>
     <ul class="nav navbar-nav navbar-center">
-    <li><a href="/success"style="color:#ffffff;"><span class="glyphicon glyphicon-user"style="color:#ffffff;"></span>Profile</a></li>
-    <li><a href="/createpass"style="color:#ffffff;"><span style="color:#ffffff;"></span>Create Pass</a></li>
-    <li><a href="/passdetails"style="color:#ffffff;"><span style="color:#ffffff;"></span>Pass Details</a></li>
-    <li><a href="/renew"style="color:#ffffff;"><span style="color:#ffffff;"></span>Renew Pass</a></li>
-    <li><a href="/"style="color:#ffffff;"><span class="glyphicon glyphicon-log-in"style="color:#ffffff;"></span> Logout</a></li>
+    <li><a href="/success"style="color:#ffffff;"><span class="glyphicon glyphicon-user"style="color:#ffffff;"></span><b>Profile</b></a></li>
+    <li><a href="/createpass"style="color:#ffffff;"><span style="color:#ffffff;"></span><b>Create Pass</b></a></li>
+    <li><a href="/passs"style="color:#ffffff;"><span style="color:#ffffff;"></span><b>Pass Details</b></a></li>
+     <li><a href="/mail"style="color:#ffffff;"><span style="color:#ffffff;"></span><b>Mail</b></a></li>
+    <li><a href="/rnew"style="color:#ffffff;"><span style="color:#ffffff;"></span><b>Renew Pass</b></a></li>
+    <li><a href="/"style="color:#ffffff;"><span class="glyphicon glyphicon-log-in"style="color:#ffffff;"></span><b>Logout</b></a></li>  
     </ul>
 </div>
 </nav>
 <center>
-	<div class="panel-heading" style="font-size:22px;text-decoration: underline;padding-top:0;"><strong>Renew Pass</strong></div>
+	<div class="panel-heading" style="font-size:22px;text-decoration: underline;padding-top:0"><strong>Renew Pass</strong></div>
     <div style="padding-top:0"class="panel-body" >
-	</div>     
-	<form class="form-horizontal" method="post"action="{{url_for('create_page')}}">
-		<fieldset>
+	</div>  
+	<form class="form-horizontal" method="post" action="/renewpasss">
+			
 <div class="form-group">
  <label class="col-md-5 control-label" for="pass">Pass Id</label>  
  <div class="col-md-6">
- <input type="pass" name="passid"  placeholder="Pass Id" class="form-control input-md" required="">
+ <input type="text" name= "passid" placeholder="Pass Id" class="form-control input-md" required="">
 </div>
-</div>
-<div class="form-group">
-  <label class="col-md-5 control-label" for="user">User id</label>  
-  <div class="col-md-6">
-	  <input id="userid" name="user" type="integer"  placeholder="User Id" class="form-control input-md" >
-</div>
-</div>
-
-<div class="form-group">
-  <label class="col-md-5 control-label" for="bus">Bus No</label>
-  <div class="col-md-6">
-    <select  name="busno" class="form-control">
-      <option value="45b">45b</option>
-      <option value="45c">45c</option>
-    </select>
-  </div>
-</div>
-<div class="form-group">
-  <label class="col-md-5 control-label" for="start">start stop</label>
-  <div class="col-md-6">
-    <select  name="start" class="form-control">
-      <option value="gandhipuram">gandhipuram</option>
-      <option value="saravanapatti">saravanapatti</option>
-    </select>
-  </div>
-</div>
-<div class="form-group">
-  <label class="col-md-5 control-label" for="End">End stop</label>
-  <div class="col-md-6">
-    <select  name="end" class="form-control">
-      <option value="gandhipuram">gandhipuram</option>
-      <option value="saravanapatti">saravanapatti</option>
-            <option value="Thudiyalur">Thudiyalur</option>
-    </select>
-  </div>
-</div>
-<div class="form-group">
-  <label class="col-md-5 control-label" for="type">Pass type</label>
-  <div class="col-md-6">
-    <select  name="bustype" class="form-control">
-      <option value="monthly">Monthly</option>
-      <option value="Quateraly">Quateraly</option>
-        <option value="Half yearly">Half yearly</option>
-              <option value="Yearly">Yearly</option>
-    </select>
-  </div>
-</div>
-<div class="form-group">
- <label class="col-md-5 control-label" for="amount">Amount</label>  
- <div class="col-md-6">
- <input type="amount" name="amount"  placeholder="Amount" class="form-control" required="">
-</div>
-</div>
-<div class="form-group">
-	 <label class="col-md-5 control-label" for="card">Card No</label>  
-      <div class="col-md-3">
-        <input  type="card" name="cardno" class="form-control input-md" >
-      </div>
-      </div>
-<div class="form-group">
-	 <label class="col-md-5 control-label" for="card">Cvv No</label>  
-      <div class="col-md-4">
-        <input  type="cvv" name="cvvno" class="form-control input-md" >
-      </div>
-      </div>
-<div class="form-group">
-	 <label class="col-md-5 control-label" for="month">Expiry Month</label>  
-      <div class="col-md-4">
-        <input  type="text" name="month" class="form-control input-md" >
-      </div>
-      </div>
-<div class="form-group">
-	 <label class="col-md-5 control-label" for="year">Expiry Year</label>  
-      <div class="col-md-4">
-        <input  type="text" name="year" class="form-control input-md" >
-      </div>
-      </div>
-      
-<div class="form-group">
-  <label class="col-md-5 control-label" for="submit"></label>
-  <div class="col-md-5">
-  <button type="submit" name="submit" class="btn btn-primary">RENEW</button>
-</div>
-</div>
-</fieldset>
+</div> 
+<a href="/renewpass"><button id="submit" name="submit" class="btn btn-success">SUBMIT</button></a>
 </form>
 </div>
 </center>
-</nav>
 </body>
 </html>

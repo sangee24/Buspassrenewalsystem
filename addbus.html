@@ -56,10 +56,11 @@
     <ul class="nav navbar-nav navbar-center">
     <li><a href="/addbus"style="color:#ffffff;"><span style="color:#ffffff;"></span>Add Bus</a></li>
     <li><a href="/editbus"style="color:#ffffff;"><span style="color:#ffffff;"></span>Edit bus </a></li>
-    <li><a href="/renew"style="color:#ffffff;"><span style="color:#ffffff;"></span>Renew Pass</a></li>
+    
 <li><a href="/userdetails"style="color:#ffffff;"><span style="color:#ffffff;"></span>User details</a></li>
-<li><a href="/passdetails"style="color:#ffffff;"><span style="color:#ffffff;"></span>Pass details</a></li>
+<li><a href="/detailpass"style="color:#ffffff;"><span style="color:#ffffff;"></span>Pass details</a></li>
 <li><a href="/mail"style="color:#ffffff;"><span style="color:#ffffff;"></span>Mail</a></li>
+
     <li><a href="/"style="color:#ffffff;"><span class="glyphicon glyphicon-log-in"style="color:#ffffff;"></span> Logout</a></li>
     </ul>
 </div>
@@ -68,14 +69,14 @@
 	<div class="panel-heading" style="font-size:22px;text-decoration: underline;padding-top:0;"><strong>Add Bus</strong></div>
     <div style="padding-top:0"class="panel-body" >
 	</div>  
-	<form class="form-horizontal" method="post"action="{{url_for('add_bus')}}">
-<form name="registration" onSubmit="return formValidation();" action="PASSSUCESS.HTML"  method="post" > 
+	<form class="form-horizontal" method="post" action="{{url_for('addbus_page')}}" >
+
 <table align="center" padding="10">
         <fieldset>
  <div class="form-group">
    <label class="col-md-4 control-label" for="busno">Bus Number</label>  
    <div class="col-md-5">
-   <input type="number" name="busnumber"  placeholder="Busno" class="form-control input-md" required="">
+   <input type="text" name="busnumber"  placeholder="Busno" class="form-control input-md" required="">
  </div>
  </div>
  <div class="form-group">
@@ -91,62 +92,53 @@
  <div class="form-group">
    <label class="col-md-4 control-label" for="Bus Route">Stops   1</label>  
    <div class="col-md-3">
-   <input type="text" name="stopa"  placeholder="" class="form-control input-md" required="">
+   <input type="text" name="stopa"  placeholder="" class="form-control input-md" >
  </div>
  <label class="col-sm-1 control-label" for="Bus Route">2</label>  
    <div class="col-md-3">
-   <input type="text" name="stopb"  placeholder="" class="form-control input-md" required="">
+   <input type="text" name="stopb"  placeholder="" class="form-control input-md" >
  </div>
  </div>
  <div class="form-group">
    <label class="col-md-4 control-label" for="Bus Route">3</label>  
    <div class="col-md-3">
-   <input type="text" name="stopc"  placeholder="" class="form-control input-md" required="">
+   <input type="text" name="stopc"  placeholder="" class="form-control input-md" >
  </div>
  <label class="col-sm-1 control-label" for="Bus Route">4</label>  
    <div class="col-md-3">
-   <input type="text" name="stopd"  placeholder="" class="form-control input-md" required="">
+   <input type="text" name="stopd"  placeholder="" class="form-control input-md" >
  </div>
  </div>
  <div class="form-group">
    <label class="col-md-4 control-label" for="Bus Route">5</label>  
    <div class="col-md-3">
-   <input type="text" name="stope"  placeholder="" class="form-control input-md" required="">
+   <input type="text" name="stope"  placeholder="" class="form-control input-md" >
  </div>
  <label class="col-sm-1 control-label" for="Bus Route">6</label>  
    <div class="col-md-3">
-   <input type="text" name="stopf"  placeholder="" class="form-control input-md" required="">
+   <input type="text" name="stopf"  placeholder="" class="form-control input-md" >
  </div>
  </div><div class="form-group">
    <label class="col-md-4 control-label" for="Bus Route">7</label>  
    <div class="col-md-3">
-   <input type="text" name="stopg"  placeholder="" class="form-control input-md" required="">
+   <input type="text" name="stopg"  placeholder="" class="form-control input-md" >
  </div>
  <label class="col-sm-1 control-label" for="Bus Route">8</label>  
    <div class="col-md-3">
-   <input type="text" name="stoph"  placeholder="" class="form-control input-md" required="">
+   <input type="text" name="stoph"  placeholder="" class="form-control input-md" >
  </div>
  </div>
  <div class="form-group">
    <label class="col-md-4 control-label" for="Bus Route">9</label>  
    <div class="col-md-3">
-   <input type="text" name="stopi"  placeholder="" class="form-control input-md" required="">
+   <input type="text" name="stopi"  placeholder="" class="form-control input-md" >
  </div>
  <label class="col-sm-1 control-label" for="Bus Route">10</label>  
    <div class="col-md-3">
-   <input type="text" name="stopj"  placeholder="" class="form-control input-md" required="">
+   <input type="text" name="stopj"  placeholder="" class="form-control input-md" >
  </div>
  </div>
- <div class="form-group">
-   <label class="col-md-4 control-label" for="Bus Route">11</label>  
-   <div class="col-md-3">
-   <input type="text" name="stopk"  placeholder="" class="form-control input-md" required="">
- </div>
- <label class="col-sm-1 control-label" for="Bus Route">12</label>  
-   <div class="col-md-3">
-   <input type="text" name="stopl"  placeholder="" class="form-control input-md" required="">
- </div>
- </div>
+ 
  
  <div class="form-group">
    <label class="col-md-6 control-label" for="submit"></label>
@@ -157,8 +149,6 @@
  </fieldset>
  </form>
 </div>
-
-
 </center>
 </body>
 </html>

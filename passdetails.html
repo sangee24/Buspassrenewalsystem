@@ -7,11 +7,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
 	.no-padding{
-		padding:0px;
+		padding:80px;
 	    margin-top: auto;
 	  }
 	  .padding{
-		  padding:100px;
+		  padding:20px 18px;
 		  
 	  }  
 	#title{
@@ -37,7 +37,7 @@
   </style>
 </head>
 <body>
-	<div class="page-header no-padding">
+		<div class="page-header no-padding">
 	<div class="container" style="float:left"> 
 	<img id="bus" src="http://www.bdoto.com/images/upload/qfbuVr4N.png" class="img.responsive" style="float:right" ><br>	
   <h3 id="title" style="float:right">
@@ -45,7 +45,7 @@
 	<b><br>Online Buspass Renewal <center>System</center></b></h3>	
 	</div>
 	</div>
-		<div class="container padding">
+	<div class="container padding">
 <div class="row" >
     <div class="col-md-7 col-md-offset-3">
 <div class=" panel panel-primary" >
@@ -54,16 +54,18 @@
     <div class="navbar-header">
 </div>
     <ul class="nav navbar-nav navbar-center">
-<li><a href="/success"style="color:#ffffff;"><span class="glyphicon glyphicon-user"style="color:#ffffff;"></span><b>Profile</b></a></li>
-    <li><a href="/createpass"style="color:#ffffff;"><span style="color:#ffffff;"></span><b>Create Pass</b></a></li>
-    <li><a href="/passs"style="color:#ffffff;"><span style="color:#ffffff;"></span><b>Pass Details</b></a></li>
-    <li><a href="/rnew"style="color:#ffffff;"><span style="color:#ffffff;"></span><b>Renew Pass</b></a></li>
-    <li><a href="/"style="color:#ffffff;"><span class="glyphicon glyphicon-log-in"style="color:#ffffff;"></span><b>Logout</b></a></li>  
+    <li><a href="/correct"style="color:#ffffff;"><span style="color:#ffffff;"></span>Add Bus</a></li>
+    <li><a href="/passdetails"style="color:#ffffff;"><span style="color:#ffffff;"></span>Edit bus </a></li>
+    <li><a href="/renew"style="color:#ffffff;"><span style="color:#ffffff;"></span>Renew Pass</a></li>
+        <li><a href="/renew"style="color:#ffffff;"><span style="color:#ffffff;"></span>User details</a></li>
+<li><a href="/renew"style="color:#ffffff;"><span style="color:#ffffff;"></span>Pass details</a></li>
+<li><a href="/renew"style="color:#ffffff;"><span style="color:#ffffff;"></span>Mail</a></li>
+    <li><a href="/"style="color:#ffffff;"><span class="glyphicon glyphicon-log-in"style="color:#ffffff;"></span> Logout</a></li>
     </ul>
 </div>
 </nav>
 <center>
-	<div class="panel-heading" style="font-size:22px;text-decoration: underline;padding-top:0"><strong>Pass details</strong></div>
+<div class="panel-heading" style="font-size:22px;text-decoration: underline;padding-top:0"><strong>Pass details</strong></div>
     <div style="padding-top:0"class="panel-body" >
 	</div>  
 	<form class="form-horizontal" method="post" action="/passdetails">
@@ -77,6 +79,11 @@
 <a href="/details"><button id="submit" name="submit" class="btn btn-success">SUBMIT</button></a>
 </form>
 </div>
+
 </center>
 </body>
 </html>
+
+
+
+

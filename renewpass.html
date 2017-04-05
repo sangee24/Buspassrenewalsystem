@@ -37,7 +37,7 @@
   </style>
 </head>
 <body>
-		<div class="page-header no-padding">
+	<div class="page-header no-padding">
 	<div class="container" style="float:left"> 
 	<img id="bus" src="http://www.bdoto.com/images/upload/qfbuVr4N.png" class="img.responsive" style="float:right" ><br>	
   <h3 id="title" style="float:right">
@@ -45,7 +45,7 @@
 	<b><br>Online Buspass Renewal <center>System</center></b></h3>	
 	</div>
 	</div>
-	<div class="container padding">
+		<div class="container padding">
 <div class="row" >
     <div class="col-md-7 col-md-offset-3">
 <div class=" panel panel-primary" >
@@ -63,40 +63,31 @@
 </div>
 </nav>
 <center>
-	<div class="panel-heading" style="font-size:22px;text-decoration: underline;padding-top:0;"><strong>Create Pass</strong></div>
+	<div class="panel-heading" style="font-size:22px;text-decoration: underline;padding-top:0"><strong>Renew Pass</strong></div>
     <div style="padding-top:0"class="panel-body" >
 	</div>  
-	<form class="form-horizontal" method="post" action="{{url_for('create_page')}}" >
-			{% for register in registration %}
+	<form class="form-horizontal" method="post" action="{{url_for('renew_page')}}" >
+		<fieldset>
+			{% for createpass in createpass %}
 <div class="form-group">
  <label class="col-md-5 control-label" for="pass">Pass Id&nbsp &nbsp &nbsp &nbsp&nbsp</label>  
  <div class="col-md-5">
- <input type="text"  name="passid" value="{{register.id}}" class="form-control input-md" required="">
+ <input type="text"  name="passid" value="{{createpass.passid}}" class="form-control input-md" required="">
 </div>
-</div>{% endfor %}
-
+</div>
 
 <div class="form-group">
   <label class="col-md-5 control-label" for="bus" style="text-align:right">Bus No&nbsp &nbsp &nbsp &nbsp&nbsp</label>
   <div class="col-md-5">
-    <select  name="busno" class="form-control">
-		<option value="111">111</option>
-	 <!--{% for addb in addbus %}
-	  <option value="{{addb.busnumber}}">{{addb.busnumber}}</option>
-       {% endfor %}-->
-
-    </select>
+    <input  name="busno" value="{{createpass.busno}}"class="form-control">
+	  
   </div>
 </div>
 
 <div class="form-group">
   <label class="col-md-5 control-label" for="start" style="text-align:right">Start stop&nbsp &nbsp &nbsp </label>
   <div class="col-md-5">
-    <select  name="start" class="form-control">
-		{% for addb in addbus %}
-	  <option value="{{addb.startroute}}">{{addb.startroute}}</option>
-       {% endfor %}
-    </select>
+    <input  name="start" value="{{createpass.start}}" class="form-control">
 
   </div>
 </div>
@@ -104,69 +95,65 @@
 <div class="form-group">
   <label class="col-md-5 control-label" for="end" style="text-align:right">End stop&nbsp &nbsp &nbsp&nbsp </label>
   <div class="col-md-5">
-    <select  name="end" class="form-control">
-		
-		{% for addb in addbus %}
-	  <option value="{{addb.endroute}}">{{addb.endroute}}</option>
-       {% endfor %} 
-
-    </select>
+    <input  name="end" value="{{createpass.end}}" class="form-control">
+	  
   </div>
 </div>
 
 <div class="form-group">
   <label class="col-md-5 control-label" for="type" style="text-align:right">Pass type&nbsp &nbsp &nbsp </label>
   <div class="col-md-5">
-    <select  name="bustype" class="form-control">
-	  <option value=""></option>
-      <option value="monthly">Monthly</option>
-    </select>
+    <input  name="bustype" value="{{createpass.bustype}}" class="form-control">
+	  
   </div>
 </div>
 
 <div class="form-group">
  <label class="col-md-5 control-label" for="amount" style="text-align:right">Amount&nbsp &nbsp &nbsp &nbsp&nbsp</label>  
  <div class="col-md-5">
- <input type="amount" name="amount" value="125" placeholder="Amount" class="form-control" required="">
+ <input type="amount" name="amount" value="{{createpass.amount}}" placeholder="Amount" class="form-control" required="">
 </div>
 </div>
 
 <div class="form-group">
 	 <label class="col-md-5 control-label" for="card" style="text-align:right">Card No&nbsp &nbsp &nbsp &nbsp&nbsp</label>  
       <div class="col-md-5">
-        <input  type="card" name="cardno" class="form-control input-md" >
+        <input  type="card" name="cardno"  class="form-control input-md" >
       </div>
       </div>
 
 <div class="form-group">
 	 <label class="col-md-5 control-label" for="card" style="text-align:right">Cvv No&nbsp &nbsp &nbsp &nbsp &nbsp&nbsp</label>  
       <div class="col-md-5">
-        <input  type="cvv" name="cvvno" class="form-control input-md" >
+        <input  type="cvv" name="cvvno"  class="form-control input-md" >
       </div>
       </div>
 
 <div class="form-group">
 	 <label class="col-md-5 control-label" for="month" style="text-align:right">Start Time&nbsp &nbsp &nbsp&nbsp </label>  
       <div class="col-md-5">
-        <input  type="date" name="stime" class="form-control input-md" >
+        <input  type="date" name="stime" value="{{createpass.stime}}" class="form-control input-md" >
       </div>
       </div>
 <div class="form-group">
 	 <label class="col-md-5 control-label" for="month" style="text-align:right">End Time&nbsp &nbsp &nbsp&nbsp </label>  
       <div class="col-md-5">
-        <input  type="date" name="etime" class="form-control input-md" >
+        <input  type="date" name="etime" value="{{createpass.etime}}" class="form-control input-md" >
       </div>
-      </div>
+      </div> {% endfor %}
 
       
 <div class="form-group">
   <label class="col-md-5 control-label" for="submit"></label>
   <div class="col-md-5">
-  <button type="submit" name="submit" class="btn btn-primary">SUBMIT</button>
+  <button type="submit" name="submit" class="btn btn-primary">RENEW</button>
 </div>
-</div>
+</div> 
+
+</fieldset>
 </form>
 </div>
 </center>
 </body>
-</html>
+</html> 
+

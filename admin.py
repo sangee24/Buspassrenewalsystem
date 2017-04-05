@@ -3,7 +3,10 @@ from flask import request
 from flask import flash
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
-
+import  subprocess 
+import  os
+import json
+from subprocess import check_output
 app = Flask(__name__)
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:kite@localhost/buspass'
@@ -75,9 +78,16 @@ def editbus():
 def userdetails():
 	return render_template('userdetails.html',registration=registration.query.all())
 		
-@app.route('/mail')
-def mail():
-	return render_template('mail.html',registration=registration.query.all())
+@app.route('/smail')
+def smail():
+	return render_template('mail.html')
+	
+@app.route('/sendmail')
+def sendmail():
+	os.system('php -f mail.php')
+	return render_template('templates/mail.php')
+	
+
 		
 @app.route('/detailpass')
 def detailpass():

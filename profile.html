@@ -58,11 +58,11 @@
 </div>
 
     <ul class="nav navbar-nav navbar-center" >
-    <li><a href="/success"style="color:#ffffff;"><span class="glyphicon glyphicon-user"style="color:#ffffff;"></span>Profile</a></li>
-    <li><a href="/createpass"style="color:#ffffff;"><span style="color:#ffffff;"></span>Create Pass</a></li>
-    <li><a href="/passdetails"style="color:#ffffff;"><span style="color:#ffffff;"></span>Pass Details</a></li>
-    <li><a href="/renew"style="color:#ffffff;"><span style="color:#ffffff;"></span>Renew Pass</a></li>
-    <li><a href="/"style="color:#ffffff;"><span class="glyphicon glyphicon-log-in"style="color:#ffffff;"></span> Logout</a></li>  
+    <li><a href="/success"style="color:#ffffff;"><span class="glyphicon glyphicon-user"style="color:#ffffff;"></span><b>Profile</b></a></li>
+    <li><a href="/createpass"style="color:#ffffff;"><span style="color:#ffffff;"></span><b>Create Pass</b></a></li>
+    <li><a href="/passs"style="color:#ffffff;"><span style="color:#ffffff;"></span><b>Pass Details</b></a></li>
+    <li><a href="/rnew"style="color:#ffffff;"><span style="color:#ffffff;"></span><b>Renew Pass</b></a></li>
+    <li><a href="/"style="color:#ffffff;"><span class="glyphicon glyphicon-log-in"style="color:#ffffff;"></span><b>Logout</b></a></li>  
     </ul>
   </div>
 </nav>
@@ -72,14 +72,21 @@
 	</div>  
 
 <form class="form-horizontal">
-{% for register in registration %}
-    
+    {% for register in registration %}
   <div class="form-group">
  <label class="col-md-5 control-label" for="name" style="text-align:right">User name &nbsp &nbsp&nbsp</label>  
  <div class="col-md-5">
  <label readonly class="col-md-5 control-label" style="text-align:left">{{register.name}}</label>
 </div>
 </div>  
+
+<div class="form-group">
+ <label class="col-md-5 control-label" for="pass">Pass Id&nbsp &nbsp &nbsp &nbsp &nbsp&nbsp</label>  
+ <div class="col-md-6">
+ <label readonly class="col-md-5 control-label" style="text-align:left">{{register.id}}</label>
+</div>
+</div> 
+
  <div class="form-group">
  <label class="col-md-5 control-label" for="name" style="text-align:right">Gender &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp</label>  
  <div class="col-md-5">
@@ -119,7 +126,6 @@
 {% endfor %}
 </table> 	
 </form>
-
 </div>
 </center>
 </body>

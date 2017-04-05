@@ -45,199 +45,61 @@
 	<b><br>Online Buspass Renewal <center>System</center></b></h3>	
 	</div>
 	</div>
-	<div class="container-fluid padding">
-	
-	
-		<div class="row" >
-	  	
-	<div class="col-md-15 col-md-offset-0">
-
-	<div class=" panel panel-primary" >
-	
-		
-
-
+	<div class="container padding">
+<div class="row" >
+    <div class="col-md-11 col-md-offset-1">
+<div class=" panel panel-primary" >
 <nav class="navbar navbar-static-top"style="background-color:#191970;">
-
   <div class="container-fluid">
     <div class="navbar-header">
 </div>
     <ul class="nav navbar-nav navbar-center">
     <li><a href="/addbus"style="color:#ffffff;"><span style="color:#ffffff;"></span>Add Bus</a></li>
     <li><a href="/editbus"style="color:#ffffff;"><span style="color:#ffffff;"></span>Edit bus </a></li>
-    
-        <li><a href="/userdetails"style="color:#ffffff;"><span style="color:#ffffff;"></span>User details</a></li>
-<li><a href="/detailpass"style="color:#ffffff;"><span style="color:#ffffff;"></span>Pass details</a></li>
-<li><a href="/mail"style="color:#ffffff;"><span style="color:#ffffff;"></span>Mail</a></li>
+    <li><a href="/userdetails"style="color:#ffffff;"><span style="color:#ffffff;"></span>User details</a></li>
+	<li><a href="/detailpass"style="color:#ffffff;"><span style="color:#ffffff;"></span>Pass details</a></li>
+	<li><a href="/mail"style="color:#ffffff;"><span style="color:#ffffff;"></span>Mail</a></li>
     <li><a href="/"style="color:#ffffff;"><span class="glyphicon glyphicon-log-in"style="color:#ffffff;"></span> Logout</a></li>
     </ul>
 </div>
 </nav>
 <center>
-
-<div class="panel-heading" style="font-size:20px;text-decoration: underline;padding-top:0"><strong>Edit Bus</strong></div>
-    	    
+<div class="panel-heading" style="font-size:22px;text-decoration: underline;padding-top:0"><strong>Notification</strong></div>
     <div style="padding-top:0"class="panel-body" >
 	</div>  
-	<form class="form-horizontal" method="post" action="/editbus">
-	
-
-
-
-<table class="table  table-bordered  table-condensed">  
-
-   <thead>
-      <tr>
-         <th>BUS NUMER</th>
-         <th>FROM</th>
-         <th>TO</th>
-         <th>1</th>
-         <th>2</th>
-         <th>3</th>
-         <th>4</th>
-         <th>5</th>
-         <th>6</th>
-         <th>7</th>
-         <th>8</th>
-         <th>9</th>
-         <th>10</th>
-
-      </tr>
-   </thead>
- 
-   <tbody>
-	   
-	   
-	   {% for addbus in addbus %}
-      <tr>
-         <td>{{addbus.busnumber}}</td>
-<td>{{addbus.startroute}}</td>
-<td>{{addbus.endroute}}</td>
-<td>{{addbus.stopa}}</td>
-<td>{{addbus.stopb}}</td>
-<td>{{addbus.stopc}}</td>
-<td>{{addbus.stopd}}</td>
-<td>{{addbus.stope}}</td>
-<td>{{addbus.stopf}}</td>
-<td>{{addbus.stopg}}</td>
-<td>{{addbus.stoph}}</td>
-<td>{{addbus.stopi}}</td>
-<td>{{addbus.stopj}}</td>
-<td><a href="{{ url_for('edit_page', id=addbus.id) }}">Edit</a></td>
-                                            
- 
-      
-          
-
+	<form class="form-horizontal" method="post" action="/mail">
+			
+<table class = "table table-bordered">
+  <thead>
+<tr>
+<th>NAME</th>
+<th>GENDER</th>
+<th>QUALIFICATION</th>
+<th>ADDRESS</th>
+<th>EMAIL</th>
+<th>CITY</th>
+<th>PHONE NO</th>
+<th>Send</th>
 </tr>
-
-  {% endfor %}
-
-  
-</tbody>
-  
-      
-</table>  
-
+</thead>
+ <tbody>
+{% for register in registration %}
+<tr>
+<td>{{register.name}}</td>
+<td>{{register.gender}}</td>
+<td>{{register.qualification}}</td>
+<td>{{register.address}}</td>
+<td>{{register.email}}</td>
+<td>{{register.city}}</td>
+<td>{{register.phone}}</td>
+<td><a href="/sendm/{{register.email}}" class="btn btn-success"  >Send Mail</a></td>
+</tr>
+{% endfor %}
+ </tbody>
+</table>
 </center>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
